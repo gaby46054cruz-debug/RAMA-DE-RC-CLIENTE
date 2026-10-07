@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto y Consultas | Repuestos de Motos</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Font Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Personalización de colores principales */
+        :root {
+            --brand-orange: #FF5722;
+            --brand-orange-hover: #E64A19;
+            --dark-gray: #1E293B;
+            --card-gray: #0F172A;
+        }
+
+        /* Estilo para el fondo con imagen URL */
+        .bg-custom-image {
+            /* REEMPLAZA ESTA URL CON LA IMAGEN DE FONDO QUE DESEES */
+            background-image: linear-gradient(rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.95)), url('https://iili.io/n1ODiog.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .bg-orange-custom {
+            background-color: var(--brand-orange);
+        }
+
+        .hover-bg-orange-custom:hover {
+            background-color: var(--brand-orange-hover);
+        }
+
+        .text-orange-custom {
+            color: var(--brand-orange);
+        }
+
+        .border-orange-custom {
+            border-color: var(--brand-orange);
+        }
+
+        .shadow-orange-glow {
+            box-shadow: 0 0 20px rgba(255, 87, 34, 0.25);
+        }
+    </style>
+</head>
+<body class="bg-custom-image text-gray-100 min-h-screen flex flex-col font-sans">
+
+    <!-- HEADER / ENCABEZADO -->
+    <header class="bg-slate-900/90 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <!-- LOGO REDONDO (REEMPLAZAR LA URL EN EL ATRIBUTO SRC) -->
+                <img src="https://iili.io/n1O8KcG.jpg" 
+                     alt="Logo Empresa" 
+                     class="w-12 h-12 rounded-full border-2 border-orange-custom object-cover shadow-md">
+                
+                <!-- NOMBRE DE LA EMPRESA -->
+                <h1 class="text-xl md:text-2xl font-extrabold uppercase tracking-wider text-white">
+                    RC <span class="text-orange-custom">ELEMENTOS DE COMPETICION</span>
+                </h1>
+            </div>
+            
+            <span class="hidden md:inline-block text-xs uppercase tracking-widest bg-orange-custom/20 text-orange-custom border border-orange-custom/30 px-3 py-1 rounded-full font-semibold">
+                Mayorista & Minorista
+            </span>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="flex-grow max-w-5xl mx-auto px-4 py-8 md:py-12 w-full space-y-12">
+
+        <!-- SECCIÓN 1: TÍTULO Y REDES SOCIALES -->
+        <section class="text-center space-y-6">
+            <div class="inline-block bg-orange-custom/10 text-orange-custom border border-orange-custom/20 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
+                Atención Mayorista y Minorista
+            </div>
+            <h2 class="text-3xl md:text-5xl font-black text-white uppercase tracking-tight">
+                Contacto y Consulta
+            </h2>
+            <p class="text-gray-400 max-w-xl mx-auto text-sm md:text-base">
+                Ponete en contacto con nuestro equipo de ventas.
+            </p>
+
+            <!-- BOTONES DE REDES SOCIALES / CONTACTO DIRECTO -->
+            <div class="flex flex-wrap justify-center gap-4 pt-2">
+                <!-- WhatsApp Directo -->
+                <a href="https://wa.me/543810000000" target="_blank" class="flex items-center space-x-2 bg-slate-800/90 border border-slate-700 hover:border-green-500 hover:text-green-400 px-5 py-2.5 rounded-xl transition duration-300 shadow-lg text-sm font-semibold">
+                    <i class="fab me-1 fa-whatsapp text-green-500 text-lg"></i>
+                    <span>WhatsApp</span>
+                </a>
+
+                <!-- Facebook -->
+                <a href="https://facebook.com" target="_blank" class="flex items-center space-x-2 bg-slate-800/90 border border-slate-700 hover:border-blue-500 hover:text-blue-400 px-5 py-2.5 rounded-xl transition duration-300 shadow-lg text-sm font-semibold">
+                    <i class="fab fa-facebook text-blue-500 text-lg"></i>
+                    <span>Facebook</span>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://instagram.com" target="_blank" class="flex items-center space-x-2 bg-slate-800/90 border border-slate-700 hover:border-pink-500 hover:text-pink-400 px-5 py-2.5 rounded-xl transition duration-300 shadow-lg text-sm font-semibold">
+                    <i class="fab fa-instagram text-pink-500 text-lg"></i>
+                    <span>Instagram</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: FORMULARIO DE CONSULTAS -->
+        <section class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 md:p-8 shadow-orange-glow backdrop-blur-sm">
+            <div class="mb-6 border-b border-slate-800 pb-4">
+                <h3 class="text-xl md:text-2xl font-bold text-white flex items-center gap-2">
+                    <i class="fas fa-paper-plane text-orange-custom"></i>
+                    Formulario de Consulta
+                </h3>
+                <p class="text-gray-400 text-xs md:text-sm mt-1">Completa los campos a continuación y te responderemos de inmediato por WhatsApp.</p>
+            </div>
+
+            <form id="consultasForm" class="space-y-5">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <!-- Nombre Completo -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">Nombre y Apellido *</label>
+                        <input type="text" id="nombre" required placeholder="Ej: Juan Pérez" 
+                               class="w-full bg-slate-800/80 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-orange-custom focus:ring-1 focus:ring-orange-custom text-sm transition">
+                    </div>
+
+                    <!-- Tipo de Cliente -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">Tipo de Cliente *</label>
+                        <select id="tipoCliente" required 
+                                class="w-full bg-slate-800/80 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-orange-custom focus:ring-1 focus:ring-orange-custom text-sm transition">
+                            <option value="Minorista">Minorista / Particular</option>
+                            <option value="Mayorista">Mayorista / Taller / Repuestero</option>
+                        </select>
+                    </div>
+
+                    <!-- Teléfono -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">Teléfono de Contacto *</label>
+                        <input type="tel" id="telefono" required placeholder="Ej: 381 1234567" 
+                               class="w-full bg-slate-800/80 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-orange-custom focus:ring-1 focus:ring-orange-custom text-sm transition">
+                    </div>
+
+                    <!-- Ciudad / Localidad -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">Ciudad / Provincia *</label>
+                        <input type="text" id="ciudad" required placeholder="Ej: San Miguel de Tucumán" 
+                               class="w-full bg-slate-800/80 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-orange-custom focus:ring-1 focus:ring-orange-custom text-sm transition">
+                    </div>
+                </div>
+
+                <!-- Detalle de la Consulta -->
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">Consulta o Lista de Repuestos *</label>
+                    <textarea id="consulta" rows="4" required placeholder="Escribe aquí los repuestos que buscas, modelos de moto, marca o cantidades..." 
+                              class="w-full bg-slate-800/80 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-orange-custom focus:ring-1 focus:ring-orange-custom text-sm transition resize-none"></textarea>
+                </div>
+
+                <!-- Botón de Enviar a WhatsApp -->
+                <button type="submit" 
+                        class="w-full bg-orange-custom hover-bg-orange-custom text-white font-bold py-3.5 px-6 rounded-xl transition duration-300 flex items-center justify-center space-x-2 shadow-lg cursor-pointer uppercase tracking-wider text-sm">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                    <span>Enviar Consulta a WhatsApp</span>
+                </button>
+            </form>
+        </section>
+
+        <!-- SECCIÓN 3: UBICACIÓN Y HORARIO DE ATENCIÓN SEPARADOS -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <!-- CUADRO DE UBICACIÓN (EDITABLE) -->
+            <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 md:p-8 flex flex-col justify-between backdrop-blur-sm">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-orange-custom/20 border border-orange-custom/30 flex items-center justify-center text-orange-custom">
+                            <i class="fas fa-map-marker-alt text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white uppercase tracking-wide">Ubicación</h3>
+                    </div>
+
+                    <div class="space-y-4 text-gray-300 text-sm">
+                        <p class="font-semibold text-white text-base">Casa Central & Depósito</p>
+                        
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-location-dot text-orange-custom mt-1"></i>
+                            <div>
+                                <strong class="text-white">Dirección:</strong><br>
+                                Av. Francisco de Aguirre 1234
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-city text-orange-custom mt-1"></i>
+                            <div>
+                                <strong class="text-white">Localidad:</strong><br>
+                                San Miguel de Tucumán, Tucumán, Argentina
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-truck-fast text-orange-custom mt-1"></i>
+                            <div>
+                                <strong class="text-white">Despachos:</strong><br>
+                                Envíos diarios a todo el interior de la provincia y país.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-gray-400">
+                    * Podés retirar tus pedidos mayoristas o minoristas directamente en nuestro local.
+                </div>
+            </div>
+
+            <!-- CUADRO DE HORARIOS DE ATENCIÓN (EDITABLE) -->
+            <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 md:p-8 flex flex-col justify-between backdrop-blur-sm">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-orange-custom/20 border border-orange-custom/30 flex items-center justify-center text-orange-custom">
+                            <i class="fas fa-clock text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white uppercase tracking-wide">Horario de Atención</h3>
+                    </div>
+
+                    <ul class="space-y-3 text-sm">
+                        <!-- Lunes a Viernes -->
+                        <li class="border-b border-slate-800/80 pb-2">
+                            <div class="flex justify-between font-bold text-white">
+                                <span>Lunes a Viernes</span>
+                                <span class="text-orange-custom">Turno Cortado</span>
+                            </div>
+                            <div class="flex justify-between text-gray-400 text-xs mt-1">
+                                <span>Mañana: 08:30 a 13:00 hs</span>
+                                <span>Tarde: 16:30 a 20:30 hs</span>
+                            </div>
+                        </li>
+
+                        <!-- Sábados -->
+                        <li class="border-b border-slate-800/80 pb-2">
+                            <div class="flex justify-between font-bold text-white">
+                                <span>Sábados</span>
+                                <span class="text-orange-custom">Medio Día</span>
+                            </div>
+                            <div class="flex justify-between text-gray-400 text-xs mt-1">
+                                <span>Mañana: 09:00 a 13:30 hs</span>
+                                <span>Tarde: Cerrado</span>
+                            </div>
+                        </li>
+
+                        <!-- Domingos -->
+                        <li class="border-b border-slate-800/80 pb-2">
+                            <div class="flex justify-between font-bold text-white">
+                                <span>Domingos</span>
+                                <span class="text-red-400">Cerrado</span>
+                            </div>
+                            <div class="text-gray-400 text-xs mt-1">
+                                Sin atención al público.
+                            </div>
+                        </li>
+
+                        <!-- Feriados -->
+                        <li>
+                            <div class="flex justify-between font-bold text-white">
+                                <span>Feriados</span>
+                                <span class="text-yellow-500">Horario Especial</span>
+                            </div>
+                            <div class="text-gray-400 text-xs mt-1">
+                                09:00 a 13:00 hs (Sujeto a confirmación).
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-gray-400">
+                    * Las consultas enviadas fuera de horario se responderán a primera hora del siguiente día hábil.
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA (FOOTER) -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-6 text-center text-gray-400 text-sm mt-auto">
+        <div class="max-w-5xl mx-auto px-4 space-y-2">
+            <p>&copy; 2026 Todos los derechos reservados.</p>
+            <p class="text-xs text-gray-500">Diseñado y Desarrollado por <span class="text-gray-300 font-semibold">Gabriel Cruz</span></p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT DE ENVÍO A WHATSAPP -->
+    <script>
+        // CONFIGURA AQUÍ EL NÚMERO DE WHATSAPP (CON CÓDIGO DE PAÍS, SIN SIGNOS + NI ESPACIOS)
+        // Ejemplo para Argentina: 5493811234567
+        const TELEFONO_WHATSAPP = "549381154784506";
+
+        document.getElementById('consultasForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Captura de valores del formulario
+            const nombre = document.getElementById('nombre').value.trim();
+            const tipoCliente = document.getElementById('tipoCliente').value;
+            const telefono = document.getElementById('telefono').value.trim();
+            const ciudad = document.getElementById('ciudad').value.trim();
+            const consulta = document.getElementById('consulta').value.trim();
+
+            // Construcción del mensaje para WhatsApp
+            const mensaje = `*NUEVA CONSULTA - REPUESTOS DE MOTOS*%0A` +
+                            `----------------------------------%0A` +
+                            `*Nombre:* ${encodeURIComponent(nombre)}%0A` +
+                            `*Tipo:* ${encodeURIComponent(tipoCliente)}%0A` +
+                            `*Teléfono:* ${encodeURIComponent(telefono)}%0A` +
+                            `*Ciudad:* ${encodeURIComponent(ciudad)}%0A` +
+                            `----------------------------------%0A` +
+                            `*Consulta:*%0A${encodeURIComponent(consulta)}`;
+
+            // Enlace final de WhatsApp API
+            const urlWhatsApp = `https://api.whatsapp.com/send?phone=${TELEFONO_WHATSAPP}&text=${mensaje}`;
+
+            // Abrir WhatsApp en una nueva pestaña
+            window.open(urlWhatsApp, '_blank');
+        });
+    </script>
+</body>
+</html>
